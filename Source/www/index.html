@@ -14,6 +14,12 @@
     <script src="lib/angular/angular.js"></script>
 
     <!-- Google Places Autocomplete directive -->
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script></head>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/autocomplete.js"></script>
 
     <script>
@@ -26,21 +32,23 @@
     </script>
 </head>
 <body ng-controller="MainCtrl">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Type a letter or two, we will search places for you</h3>
-
-            <form class="form">
+<<ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Search for places and share</h1>
+      </ion-header-bar>
+      <ion-content class="padding" ng-controller="ShareCtrl">
+	  <h4>Type a letter or two, we will search places for you</h4>
+         
+        <ion-list>
+		<form class="form">
                 <input class="form-control" g-places-autocomplete="" ng-model="place">
             </form>
-        </div>
-    </div>
-</div>
+			<br>
+			<br>
+          <ion-item><button class="button button-full button-outline button-positive" ng-click="share()">Share your message or location</button></ion-item>
+		</ion-list>
+      </ion-content>
+    </ion-pane>
 			
 </body>
-			<ion-list>
-				<ion-item><button class="button button-full button-outline button-positive" ng-click="share()">Share your message or location</button></ion-item>
-			</ion-list>
-
 </html>
