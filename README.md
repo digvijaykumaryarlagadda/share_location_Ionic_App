@@ -7,4 +7,6 @@ https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
 
 http://ngcordova.com/docs/plugins/socialSharing/
 
+https://github.com/petehouston/demo-ionic-social-sharing
+
 https://developers.google.com/places/
